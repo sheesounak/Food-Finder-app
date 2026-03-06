@@ -1,31 +1,3 @@
-// import { useContext } from "react";
-// import { GlobalContext } from "../Context";
-// import Recipecard from "../components/recipecard";
-
-// const Favourites = () => {
-//   const { favourites } = useContext(GlobalContext);
-
-//   if (favourites.length === 0) {
-//     return <h2>No favourites added yet</h2>;
-//   }
-
-//   return (
-//     <div>
-//       <h2>Your Favourites</h2>
-//       {favourites.map((item) => (
-//         <Recipecard key={item.id} recipe={item} />
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Favourites;
-
-
-
-
-
-
 
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
@@ -61,7 +33,7 @@ const Favourites = () => {
               onClick={() => toggleFavourite(item)}
               className="mt-3 bg-red-500 text-white px-4 py-2 rounded-lg mr-3"
             >
-              Remove ❤️
+              Remove 
             </button>
               {<Link
                     to={`/recipe-item/${item.id}`}
