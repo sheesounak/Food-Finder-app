@@ -1,71 +1,3 @@
-// import React, { useState } from 'react'
-// import { createContext } from "react";
-
-
-// export const GlobalContext = createContext(null);
-
-
-
-// const GlobalState = ({ children }) => {
-
-//     const [search, setSearch] = useState("");
-//     const [loading,setLoading] = useState(false)
-//     const [recipes, setRecipes] = useState([]);
-//     const [msg, setMsg] = useState("Search recipes")
-    
-    
-    
-   
-//     async function handleSubmit(e) {
-//         e.preventDefault();
-
-//         if (!search.trim()) 
-//             { 
-//                 alert("Please enter something"); 
-//                 return; 
-//             }
-
-//         try { 
-//             const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes?search=${search}`); 
-//         if (!res.ok)
-//              { 
-//             setMsg("Failed to fetch recipes"); 
-//             return; 
-//             }
-           
-
-//             const data = await res.json(); 
-//             if (data.data.recipes.length === 0) { 
-//                 setMsg("No recipes found for your search"); 
-//                 setRecipes([]); } 
-//                 else { 
-//                     setRecipes(data.data.recipes); 
-//                     setLoading(false) 
-//                     setMsg("Your search results"); 
-//                 } 
-//             }
-//         catch (e) { 
-//             console.log(e); 
-//             setRecipes([]); 
-//             setLoading(false); 
-//         }
-//     }
-    
-
-
-//     return (
-//         <GlobalContext.Provider value={{ search, recipes, setSearch, handleSubmit, loading, msg, setMsg }}>
-//             {children}
-//         </GlobalContext.Provider>
-//     )
-// }
-
-// export default GlobalState
-
-
-
-
-
 
 
 import React, { createContext, useState } from "react";
@@ -79,12 +11,10 @@ const GlobalState = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("Search recipes");
 
-  // 🔁 Fetch Recipes
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!search.trim()) {
-    //   alert("Please enter something");
     toast.error("Please enter something");
       return;
     }
