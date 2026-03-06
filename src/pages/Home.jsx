@@ -1,37 +1,4 @@
 
-// import React, { useContext } from "react";
-// import { GlobalContext } from "../Context";
-// import Recipecard from "../components/recipecard";
-
-// const Home = () => {
-//   const { loading, recipes, msg} = useContext(GlobalContext);
-
-//   if (loading) return <div>Loading...Please wait!</div>;
-
-//   return (
-//     <div>
-//       <h2 className="text-center text-xl font-semibold my-4">{msg}</h2>
-    
-
-//       <div className="py-8 container mx-auto flex flex-wrap justify-center gap-10">
-//         { 
-//           recipes.map((item) => (
-//             <Recipecard key={item.id} item={item} />
-//           ))
-//         }
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Home;
-
-
-
-
-
-
-
 
 
 import React, { useContext } from "react";
