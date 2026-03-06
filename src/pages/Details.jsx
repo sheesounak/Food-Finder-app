@@ -1,6 +1,3 @@
-
-
-
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GlobalContext } from "../Context";
@@ -51,7 +48,7 @@ const Details = () => {
     );
   }
 
-  // ⭐ Favourite check
+  
   const isFavourite = favourites.some(
     (item) => item.id === recipedetails.id
   );
@@ -75,7 +72,7 @@ const Details = () => {
             {recipedetails.title}
           </h1>
 
-          {/* ⭐ Toggle Favourite */}
+          
           <button
             onClick={() => toggleFavourite(recipedetails)}
             className={`w-fit px-6 py-2 rounded-xl font-semibold transition
@@ -85,7 +82,7 @@ const Details = () => {
                   : "bg-indigo-600 text-white"
               }`}
           >
-            {isFavourite ? "Remove from Favourites ❤️" : "Add to Favourites 🤍"}
+            {isFavourite ? "Remove from Favourites " : "Add to Favourites "}
           </button>
 
           <div>
